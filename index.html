@@ -1,16 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App</title>
-    
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
+
 <body>
-    
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">QUIZAPP</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">HTML</a>
+          <a class="nav-link" href="#">CSS</a>
+          <a class="nav-link" href="#">JS</a>
+          <a class="nav-link" href="#">Java</a>
+          <!-- <a class="nav-link disabled">Disabled</a> -->
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card quiz-card mb-3">
+      <div class="row g-0">
+        <div class="col-md-2 bg-navbar flex-column">
+          <img src="img/logo.png" class="img-fluid rounded-start navbar-logo">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link text-white active" href="#">HTML</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">CSS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">JS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Java</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Frage</h5>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                <span class="badge answer-choice">New</span>
+                Antwort
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                Antwort
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                Antwort
+              </div>
+            </div>
+
+            <div class="card mb-4">
+              <div class="card-body">
+                Antwort
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
