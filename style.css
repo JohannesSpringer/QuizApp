@@ -29,12 +29,36 @@ body {
 
 .navbar-logo {
     position: absolute;
-    top: 16px;
+    top: 0;
     height: 64px !important;
+    width: 3rem;
+    object-fit: contain;
 }
 
 .answer-choice {
     background-color: #d6d6d6;
     color: black !important;
     font-weight: bold;
+}
+
+.list-group {
+    --bs-list-group-item-padding-x: 2rem !important;
+    --bs-list-group-bg: unset !important;
+    width: 100%;
+}
+
+.list-group-item {
+    color: #cbcbcb !important;
+    border: unset !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin: 12px 0;
+}
+
+.list-group-item.active {
+    color: white !important;
+    background-color: unset !important;
+    border-left: solid 4px !important;
+    border-color: white !important;
+    margin-top: 12px !important;
 }

@@ -14,25 +14,17 @@
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 
-<body>
+<body onload="init()">
   <div class="container">
     <div class="card quiz-card mb-3">
       <div class="row g-0">
         <div class="col-md-2 bg-navbar flex-column">
           <img src="img/logo.png" class="img-fluid rounded-start navbar-logo">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link text-white active" href="#">HTML</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">CSS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">JS</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Java</a>
-            </li>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">HTML</li>
+            <li class="list-group-item active">CSS</li>
+            <li class="list-group-item">JS</li>
+            <li class="list-group-item">Java</li>
           </ul>
         </div>
         <div class="col-md-10">
