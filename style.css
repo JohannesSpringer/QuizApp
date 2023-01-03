@@ -1,5 +1,6 @@
 body {
     background-color: rgb(254, 250, 239) !important;
+    font-family: 'Rubik', sans-serif !important;
 }
 
 .container {
@@ -12,11 +13,13 @@ body {
 
 .card {
     border: unset !important;
+    --bs-card-spacer-x: 5rem !important;
 }
 
 .quiz-card {
     width: 40rem;
-    box-shadow: 0px 0px 10px 1px rgb(0 0 0 / 20%);
+    box-shadow: 0px 0px 10px -3px rgb(0 0 0 / 20%);
+    background-color: #f7f7f7 !important;
 }
 
 .bg-navbar {
@@ -37,10 +40,25 @@ body {
     object-fit: contain;
 }
 
-.answer-choice {
+.card-body-content {
+    background-color: white;
+    display: flex;
+    position: relative;
+}
+
+.card-body-choice {
     background-color: #d6d6d6;
     color: black !important;
     font-weight: bold;
+    font-size: 1.5rem;
+    width: 2.6rem;
+    height: 2.6rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .list-group {
@@ -66,8 +84,4 @@ body {
     border-left: solid 4px !important;
     border-color: white !important;
     margin-top: 12px !important;
-}
-
-.card-body-content {
-    background-color: white;
 }
