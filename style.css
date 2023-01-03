@@ -13,7 +13,8 @@ body {
 
 .card {
     border: unset !important;
-    --bs-card-spacer-x: 5rem !important;
+    --bs-card-spacer-x: 5rem !important; 
+    --bs-card-title-spacer-y: 1.5rem !important;
 }
 
 .quiz-card {
@@ -50,15 +51,19 @@ body {
     background-color: #d6d6d6;
     color: black !important;
     font-weight: bold;
-    font-size: 1.5rem;
-    width: 2.6rem;
-    height: 2.6rem;
+    width: 2.8rem;
+    height: 2.8rem;
     position: absolute;
-    left: 0.5rem;
-    top: 0.5rem;
+    left: 0.4rem;
+    top: 0.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card-title {
+    text-align: center;
+    margin-top: var(--bs-card-title-spacer-y);
 }
 
 .list-group {
