@@ -9,6 +9,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .card {
@@ -21,6 +22,24 @@ body {
     width: 40rem;
     box-shadow: 0px 0px 10px -3px rgb(0 0 0 / 20%);
     background-color: #f7f7f7 !important;
+}
+
+.change-question-card {
+    width: 40rem;
+}
+
+.left-right-arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-right-arrows img {
+    border-radius: 100%;
+    background-color: #D9DEF1;
+    height: 36px;
+    padding: 8px;
+    object-fit: contain;
+    cursor: pointer;
 }
 
 .bg-navbar {
@@ -89,4 +108,15 @@ body {
     border-left: solid 4px !important;
     border-color: white !important;
     margin-top: 12px !important;
+}
+
+.progress {
+    border-radius: unset !important;
+    background-color: #AEAEAC !important;
+    height: 0.75rem !important;
+}
+
+.progress-bar {
+    background-color: #27355C !important;
+    border-radius: 0 0.75rem 0.75rem 0;
 }
