@@ -59,11 +59,17 @@ function showQuestion() {
 function answer(selection) {
     let question = questions[currentQuestion];
     let selectedQuestionNumber = selection.slice(-1);
-    let cardId = selection + '_card'
+    let cardId = selection + '_card';
 
     if(selectedQuestionNumber == question['right_answer']) {
-        document.getElementById(cardId).classList.add = 'bg-green';
+        document.getElementById(cardId).classList.add('bg-right-answer');
     } else {
-        document.getElementById(cardId).classList.add = 'bg-red';
+        document.getElementById(cardId).classList.add('bg-danger');
     }
+    getChildDivFromId(cardId);
+}
+
+function getChildDivFromId(id) {
+    let children = document.getElementById(id).getElementsByTagName('div');
+    children.classList.add('bg-right-answer-choice');
 }
