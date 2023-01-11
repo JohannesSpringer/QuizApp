@@ -14,6 +14,7 @@ body {
 
 .card {
     border: unset !important;
+    border-radius: unset !important;
     --bs-card-spacer-x: 5rem !important; 
     --bs-card-title-spacer-y: 1.5rem !important;
 }
@@ -64,6 +65,7 @@ body {
     /* background-color: white; */
     display: flex;
     position: relative;
+    /* z-index: 100; */
 }
 
 .card-body-content:hover {
@@ -73,7 +75,6 @@ body {
 
 .card-body-choice {
     background-color: #d6d6d6;
-    color: black !important;
     font-weight: bold;
     width: 2.8rem;
     height: 2.8rem;
@@ -83,6 +84,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* z-index: 99; */
 }
 
 .card-title {
@@ -128,9 +130,19 @@ body {
 }
 
 .bg-right-answer {
-    background-color: rgba(183, 247, 153, 1);
+    background-color: #b7f799;
 }
 
-.bg-right-answer-choice {
-    background-color: rgb(76, 191, 25);
+.bg-wrong-answer {
+    background-color: #ffa3a4;
+}
+
+.right-answer-choice {
+    background-color: #4cbf19;
+    color: white;
+}
+
+.wrong-answer-choice {
+    background-color: #f81818;
+    color: white;
 }

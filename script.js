@@ -60,16 +60,13 @@ function answer(selection) {
     let question = questions[currentQuestion];
     let selectedQuestionNumber = selection.slice(-1);
     let cardId = selection + '_card';
+    let cardChoiceId = cardId + '_choice';
 
     if(selectedQuestionNumber == question['right_answer']) {
         document.getElementById(cardId).classList.add('bg-right-answer');
+        document.getElementById(cardChoiceId).classList.add('right-answer-choice');
     } else {
-        document.getElementById(cardId).classList.add('bg-danger');
+        document.getElementById(cardId).classList.add('bg-wrong-answer');
+        document.getElementById(cardChoiceId).classList.add('wrong-answer-choice');
     }
-    getChildDivFromId(cardId);
-}
-
-function getChildDivFromId(id) {
-    let children = document.getElementById(id).getElementsByTagName('div');
-    children.classList.add('bg-right-answer-choice');
 }
