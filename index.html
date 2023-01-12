@@ -23,6 +23,8 @@
   <div class="container">
     <div class="card quiz-card mb-3">
       <div class="row g-0">
+
+
         <div class="col-md-2 bg-navbar flex-column">
           <img src="img/logo.png" class="img-fluid rounded-start navbar-logo">
           <ul class="list-group list-group-flush">
@@ -33,7 +35,11 @@
           </ul>
         </div>
         <div class="col-md-10">
-          <div class="card-body">
+          <div class="card-body" id="endScreen" style="display: none;">
+            Quiz beendet!
+          </div>
+          
+          <div class="card-body" id="questionBody">
             <h5 class="card-title" id="question-text">Frage</h5>
 
             <div class="card mb-4">
@@ -71,8 +77,9 @@
       <div class="row g-0">
         <div class="col-md-2 bg-transparent"></div>
         <div class="col-md-10 left-right-arrows bg-transparent">
-          <img src="img/arrow-left.png" alt="vorherige Frage">
-          <img src="img/arrow-right.png" alt="nächste Frage">
+          <button onclick="previousQuestion()" class="btn-next" id="previous-question"><img src="img/arrow-left.png" alt="vorherige Frage"></button>
+          <button onclick="nextQuestion()" class="btn-next" id="next-question" disabled><img src="img/arrow-right.png" alt="nächste Frage"
+              ></button>
         </div>
       </div>
     </div>
