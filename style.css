@@ -151,3 +151,18 @@ body {
     border: unset;
     background-color: unset;
 }
+
+.quiz-complete-head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.quiz-complete-head img {
+    width: 86px;  
+}
+
+.height-card-min {
+    min-height: 420px;
+}
