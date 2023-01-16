@@ -40,9 +40,15 @@
               <img src="img/brain-result.png" alt="">
               <b>COMPLETE <br><span>HTML</span> QUIZ</b>
             </div>
-            <div>
-
+            <div class="quiz-complete-score">
+              <div>YOUR SCORE</div>
+              <div id="quizScore">5/10</div>
             </div>
+            <div class="quiz-complete-buttons">
+              <button type="button" class="btn btn-primary ">SHARE</button>
+              <button type="button" class="btn btn-outline-primary">REPLAY</button>
+            </div>
+
           </div>
 
           <div class="card-body height-card-min" id="questionBody">
@@ -83,9 +89,10 @@
       <div class="row g-0">
         <div class="col-md-2 bg-transparent"></div>
         <div class="col-md-10 left-right-arrows bg-transparent">
-          <button onclick="previousQuestion()" class="btn-next" id="previous-question"><img src="img/arrow-left.png" alt="vorherige Frage"></button>
-          <button onclick="nextQuestion()" class="btn-next" id="next-question" disabled><img src="img/arrow-right.png" alt="nächste Frage"
-              ></button>
+          <button onclick="previousQuestion()" class="btn-next" id="previous-question"><img src="img/arrow-left.png"
+              alt="vorherige Frage"></button>
+          <button onclick="nextQuestion()" class="btn-next" id="next-question" disabled><img src="img/arrow-right.png"
+              alt="nächste Frage"></button>
         </div>
       </div>
     </div>

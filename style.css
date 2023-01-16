@@ -166,3 +166,34 @@ body {
 .height-card-min {
     min-height: 420px;
 }
+
+.quiz-complete-score {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 32px;
+    color: orange;
+    font-weight: bold;
+}
+
+#quizScore {
+    color: black;
+}
+
+.btn-primary {
+    background-color: #183CE8 !important;
+    margin-top: 32px;
+    width: 10rem;
+}
+
+.btn-outline-primary {
+    border: unset !important;
+    color: #183CE8 !important;
+    width: 10rem;
+}
+
+.quiz-complete-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

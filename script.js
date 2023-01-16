@@ -53,9 +53,8 @@ function init() {
 }
 
 function showQuestion() {
-
     if (currentQuestion >= questions.length) {
-        // TODO: Show End Screen
+        calculateScore();
         document.getElementById('endScreen').style = '';
         document.getElementById('questionBody').style = 'display: none;';
     } else {
@@ -66,7 +65,7 @@ function showQuestion() {
         document.getElementById('answer_3').innerHTML = question['answer_3'];
         document.getElementById('answer_4').innerHTML = question['answer_4'];
         if (question["selected_answer"] != '') {
-            answer(question["selected_answer"]);
+            answer(`answer_${question["selected_answer"]}`);
         }
     }
 }
@@ -75,7 +74,7 @@ function answer(selection) {
     let question = questions[currentQuestion];
     let selectedQuestionNumber = selection.slice(-1);
     let cardId = selection + '_card';
-    question["selected_answer"] = selection;
+    question["selected_answer"] = selectedQuestionNumber;
 
     let idOfRightAnswerCard = `answer_${question['right_answer']}_card`;
 
@@ -125,4 +124,13 @@ function resetAnswerButtons() {
     for (let i = 1; i < 5; i++) {
         removeClassToAnswerButton(`answer_${i}_card`);
     }
+}
+
+function calculateScore() {
+    let score = 0;
+    for (let i = 0; i < questions.length; i++) {
+        let question = questions[i];
+        if (question['right_answer'] == question['selected_answer']) score++;
+    }
+    document.getElementById('quizScore').innerHTML = `${score}/${questions.length}`;
 }
