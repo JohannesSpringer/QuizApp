@@ -213,3 +213,49 @@ li {
 .quiz-complete-trophy img {
     height: 12rem;
 }
+
+#startScreen {
+    width: 100%;
+    background-image: url('img/brainbg.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'PT SANS';
+    font-size: 24px;
+    position: relative;
+}
+
+.quiz-start-head {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 8rem;
+}
+
+.quiz-start {
+    display: flex;
+    justify-content: right;
+    align-items: right;
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+}
+
+.btn-bd-primary {
+    --bs-btn-color: var(--bs-white) !important;
+    --bs-btn-bg: #FF4D10 !important;
+    --bs-btn-hover-color: var(--bs-white) !important;
+    --bs-btn-hover-bg: rgb(230, 57, 0) !important;
+    width: 11rem;
+    display: flex !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+
+.quiz-start-arrow {
+    height: 24px;
+}

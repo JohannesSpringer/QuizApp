@@ -160,3 +160,10 @@ function resetSelectedAnswers() {
         question['selected_answer'] = '';
     }
 }
+
+function chooseQuiz(quizId) {
+    for (let i = 0; i < 4; i++) {
+        document.getElementById(`quiz_${i+1}`).classList.remove('active');    
+    }
+    document.getElementById(`${quizId}`).classList.add('active');
+}
