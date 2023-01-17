@@ -18,7 +18,7 @@
 <body onload="init()">
   <div class="progress" role="progressbar" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0"
     aria-valuemax="100">
-    <div class="progress-bar" style="width: 10%"></div>
+    <div class="progress-bar" id="progressBar" style="width: 0%"></div>
   </div>
   <div class="container">
     <div class="card quiz-card mb-3">
@@ -28,10 +28,10 @@
         <div class="col-md-2 bg-navbar flex-column">
           <img src="img/logo.png" class="img-fluid rounded-start navbar-logo">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">HTML</li>
-            <li class="list-group-item active">CSS</li>
-            <li class="list-group-item">JS</li>
-            <li class="list-group-item">Java</li>
+            <li class="list-group-item" onclick="chooseQuiz('html')">HTML</li>
+            <li class="list-group-item active" onclick="chooseQuiz('css')">CSS</li>
+            <li class="list-group-item" onclick="chooseQuiz('js')">JS</li>
+            <li class="list-group-item" onclick="chooseQuiz('java')">Java</li>
           </ul>
         </div>
         <div class="col-md-10">
@@ -45,10 +45,12 @@
               <div id="quizScore">5/10</div>
             </div>
             <div class="quiz-complete-buttons">
-              <button type="button" class="btn btn-primary ">SHARE</button>
-              <button type="button" class="btn btn-outline-primary">REPLAY</button>
+              <button type="button" class="btn btn-primary">SHARE</button>
+              <button type="button" class="btn btn-outline-primary" onclick="restartGame()">REPLAY</button>
             </div>
-
+            <div class="quiz-complete-trophy">
+              <img src="img/tropy.png" alt="Trophäe">
+            </div>
           </div>
 
           <div class="card-body height-card-min" id="questionBody">

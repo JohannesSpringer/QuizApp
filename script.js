@@ -47,6 +47,8 @@ let questions = [
 ];
 
 let currentQuestion = 0;
+let AUDIO_SUCCESS = new Audio('audio/success.mp3');
+let AUDIO_FAIL = new Audio('audio/fail.mp3');
 
 function init() {
     showQuestion();
@@ -55,9 +57,11 @@ function init() {
 function showQuestion() {
     if (currentQuestion >= questions.length) {
         calculateScore();
+        calculateProgressBar();
         document.getElementById('endScreen').style = '';
         document.getElementById('questionBody').style = 'display: none;';
     } else {
+        calculateProgressBar();
         let question = questions[currentQuestion];
         document.getElementById('question-text').innerHTML = question['question'];
         document.getElementById('answer_1').innerHTML = question['answer_1'];
@@ -80,9 +84,11 @@ function answer(selection) {
 
     if (selectedQuestionNumber == question['right_answer']) {
         addClassToAnswerButton(cardId, true); // second parameter is right (true) or wrong (false) answer 
+        AUDIO_SUCCESS.play();
     } else {
         addClassToAnswerButton(cardId, false);
         addClassToAnswerButton(idOfRightAnswerCard, true);
+        AUDIO_FAIL.play();
     }
     document.getElementById('next-question').disabled = false;
 
@@ -133,4 +139,24 @@ function calculateScore() {
         if (question['right_answer'] == question['selected_answer']) score++;
     }
     document.getElementById('quizScore').innerHTML = `${score}/${questions.length}`;
+}
+
+function calculateProgressBar() {
+    let percent = Math.round(currentQuestion / questions.length * 100);
+    document.getElementById('progressBar').style.width = `${percent}%`;
+}
+
+function restartGame() {
+    document.getElementById('questionBody').style = '';
+    document.getElementById('endScreen').style = 'display: none;';
+    currentQuestion = 0;
+    resetSelectedAnswers();
+    init();
+}
+
+function resetSelectedAnswers() {
+    for (let index = 0; index < questions.length; index++) {
+        let question = questions[index];
+        question['selected_answer'] = '';
+    }
 }

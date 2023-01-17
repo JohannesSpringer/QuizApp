@@ -3,6 +3,10 @@ body {
     font-family: 'Rubik', sans-serif !important;
 }
 
+li {
+    cursor: pointer;
+}
+
 .container {
     background-color: rgb(254, 250, 239) !important;
     min-height: 100vh;
@@ -121,7 +125,7 @@ body {
 .progress {
     border-radius: unset !important;
     background-color: #AEAEAC !important;
-    height: 0.75rem !important;
+    height: 1.0rem !important;
 }
 
 .progress-bar {
@@ -190,10 +194,22 @@ body {
     border: unset !important;
     color: #183CE8 !important;
     width: 10rem;
+    background-color: transparent !important;
 }
 
 .quiz-complete-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.quiz-complete-trophy {
+    height: 10vh;
+    position: fixed;
+    right: 0;
+    top: calc(50vh - 6rem);
+}
+
+.quiz-complete-trophy img {
+    height: 12rem;
 }
