@@ -49,6 +49,75 @@ let questionsQuiz1 = [
     },
 ];
 
+let questionsQuiz2 = [
+    {
+        "question": 'Wie hieß der Liedsänger von Queen?',
+        "answer_1": 'Brian May',
+        "answer_2": 'Roger Taylor',
+        "answer_3": 'Freddie Mercury',
+        "answer_4": 'John Deacon',
+        "right_answer": '3',
+        "selected_answer": '',
+    },
+    {
+        "question": 'In welcher deutschen Band singt Campino?',
+        "answer_1": 'Die Toten Hosen',
+        "answer_2": 'Die Ärzte',
+        "answer_3": 'Rammstein',
+        "answer_4": 'Sportfreunde Stiller',
+        "right_answer": '1',
+        "selected_answer": '',
+    },
+    {
+        "question": 'Aus wie vielen verschiedenen Noten besteht eine Dur-Tonleiter?',
+        "answer_1": '6',
+        "answer_2": '7',
+        "answer_3": '8',
+        "answer_4": '9',
+        "right_answer": '3',
+        "selected_answer": '',
+    },
+];
+
+let questionsQuiz3 = [
+    {
+        "question": 'Wie heißt die Hauptstadt von Burkina Faso?',
+        "answer_1": 'Honolulu',
+        "answer_2": 'Sydney',
+        "answer_3": 'Burkina',
+        "answer_4": 'Ouagadougou',
+        "right_answer": '4',
+        "selected_answer": '',
+    },
+    {
+        "question": 'Welches Land ist flächenmäßig das zweitgrößte der Erde?',
+        "answer_1": 'Kanada',
+        "answer_2": 'Australien',
+        "answer_3": 'Russland',
+        "answer_4": 'USA',
+        "right_answer": '2',
+        "selected_answer": '',
+    },
+    {
+        "question": 'Welches ist das einzige deutsche Bundesland, in dem keine kreisfreie Stadt existiert?',
+        "answer_1": 'Mecklenburg-Vorpommern',
+        "answer_2": 'Berlin',
+        "answer_3": 'Saarland',
+        "answer_4": 'Hessen',
+        "right_answer": '3',
+        "selected_answer": '',
+    },
+    {
+        "question": 'Welcher ist der längste Fluss der Welt?',
+        "answer_1": 'Jangtsekiang',
+        "answer_2": 'Mississippi',
+        "answer_3": 'Amazonas',
+        "answer_4": 'Nil',
+        "right_answer": '4',
+        "selected_answer": '',
+    },
+];
+
 let questionsQuiz4 = [
     {
         "question": 'Welches Amt hat Olaf Scholz?',
@@ -132,15 +201,6 @@ let questionsQuiz4 = [
         "selected_answer": '',
     },
     {
-        "question": 'Welches Amt hat Boris Pistorius?',
-        "answer_1": 'Bundesminister für Ernährung und Landwirtschaft',
-        "answer_2": 'Bundesminister der Verteidigung',
-        "answer_3": 'Bundesminister für Arbeit und Soziales',
-        "answer_4": 'Bundesminister für Gesundheit',
-        "right_answer": '2',
-        "selected_answer": '',
-    },
-    {
         "question": 'Welches Amt hat Lisa Paus?',
         "answer_1": 'Bundesministerin für Wirtschaft und Klimaschutz',
         "answer_2": 'Bundesministerin des Auswärtigen Amtes',
@@ -209,7 +269,7 @@ let questionsQuiz4 = [
         "answer_2": 'Bundesminister für Umwelt, Naturschutz, nukleare Sicherheit und Verbraucherschutz',
         "answer_3": 'Bundesminister für Bildung und Forschung',
         "answer_4": 'Bundesminister für Digitales und Verkehr',
-        "right_answer": '4',
+        "right_answer": '1',
         "selected_answer": '',
     },
 ];
@@ -320,7 +380,7 @@ function restartGame() {
     document.getElementById('endScreen').style = 'display: none;';
     currentQuestion = 0;
     resetSelectedAnswers();
-    init();
+    showQuestion();
 }
 
 function resetSelectedAnswers() {
@@ -339,7 +399,11 @@ function chooseQuiz(quizId) {
     document.getElementById('questionBody').style = 'display: none;';
     document.getElementById('startScreen').style = '';
     document.getElementById('endScreen').style = 'display: none;';
-    loadQuestions(quizId);   
+    currentQuestion = 0;
+    document.getElementById('next-question').disabled = true;
+    resetAnswerButtons();
+    resetSelectedAnswers();
+    loadQuestions(quizId);
     showQuestion();
 }
 
