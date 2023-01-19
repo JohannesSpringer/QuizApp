@@ -12,39 +12,30 @@ let questionsQuiz1 = [
         "selected_answer": '',
     },
     {
-        "question": 'In welchem deutschen Bundesland liegt der Bodensee?',
-        "answer_1": 'Hessen',
-        "answer_2": 'Sachsen',
-        "answer_3": 'Baden-Württemberg',
-        "answer_4": 'Mecklenbug-Vorpommern',
+        "question": 'Was bedeutet das HTML Tag <a>?',
+        "answer_1": 'Text Fett',
+        "answer_2": 'Container',
+        "answer_3": 'Ein Link',
+        "answer_4": 'Kursiv',
         "right_answer": '3',
         "selected_answer": '',
     },
     {
-        "question": 'Wie viele Teile gibt es von Avatar?',
-        "answer_1": '1',
-        "answer_2": '2',
-        "answer_3": '3',
-        "answer_4": '4',
+        "question": 'Wie bindet man eine Website in eine Website ein?',
+        "answer_1": '<iframe>, <frame> and <frameset>',
+        "answer_2": '<iframe>',
+        "answer_3": '<frame>',
+        "answer_4": '<frameset>',
         "right_answer": '2',
         "selected_answer": '',
     },
     {
-        "question": 'Aus welchem Kontinent kommen die Big Five?',
-        "answer_1": 'Afrika',
-        "answer_2": 'Australien',
-        "answer_3": 'Südamerika',
-        "answer_4": 'Asien',
+        "question": 'Wie stellt man Text am besten Fett dar?',
+        "answer_1": '<strong>',
+        "answer_2": 'CSS nutzen',
+        "answer_3": '<bold>',
+        "answer_4": '<b>',
         "right_answer": '1',
-        "selected_answer": '',
-    },
-    {
-        "question": 'Welcher Baum ist kein Laubbaum?',
-        "answer_1": 'Kastanie',
-        "answer_2": 'Buche',
-        "answer_3": 'Linde',
-        "answer_4": 'Lärche',
-        "right_answer": '4',
         "selected_answer": '',
     },
 ];
@@ -95,7 +86,7 @@ let questionsQuiz3 = [
         "answer_2": 'Australien',
         "answer_3": 'Russland',
         "answer_4": 'USA',
-        "right_answer": '2',
+        "right_answer": '1',
         "selected_answer": '',
     },
     {
@@ -413,8 +404,10 @@ function loadQuestions(quizId) {
             questions = questionsQuiz1;
             break;
         case '2':
-            //questions = questionsQuiz2;
-            console.log('Quiz 2');
+            questions = questionsQuiz2;
+            break;
+        case '3':
+            questions = questionsQuiz3;
             break;
         case '4':
             questions = questionsQuiz4;
