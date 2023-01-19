@@ -66,10 +66,13 @@ li {
 }
 
 .card-body-content {
-    /* background-color: white; */
     display: flex;
     position: relative;
-    /* z-index: 100; */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0.5rem !important;
+    align-items: center;
+    min-height: 56px;
 }
 
 .card-body-content:hover {

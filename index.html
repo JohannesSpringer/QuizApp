@@ -31,7 +31,7 @@
             <li class="list-group-item active" id="quiz_1" onclick="chooseQuiz('quiz_1')">HTML</li>
             <li class="list-group-item" id="quiz_2" onclick="chooseQuiz('quiz_2')">CSS</li>
             <li class="list-group-item" id="quiz_3" onclick="chooseQuiz('quiz_3')">JS</li>
-            <li class="list-group-item" id="quiz_4" onclick="chooseQuiz('quiz_4')">Java</li>
+            <li class="list-group-item" id="quiz_4" onclick="chooseQuiz('quiz_4')">Politik</li>
           </ul>
         </div>
         <div class="col-md-10">
@@ -56,13 +56,13 @@
           <div class="card-body height-card-min" id="startScreen">
             <div class="quiz-start-head">
               <b>Welcome to <br>
-                The Awesome <span>HTML</span> QUIZ</b>
+                The Awesome <span id="quizName">HTML</span> QUIZ</b>
               <span style="font-size: 20px">Ready for the Challenge?</span>
             </div>
             <div class="quiz-start">
-              <button type="button" class="btn btn-bd-primary">
+              <button type="button" class="btn btn-bd-primary" onclick="startQuiz()">
                 START NOW
-                <img class="quiz-start-arrow" src="img/arrow-right-white.png" onclick="startQuiz" alt="Quiz starten">
+                <img class="quiz-start-arrow" src="img/arrow-right-white.png" alt="Quiz starten">
               </button>
             </div>
           </div>
