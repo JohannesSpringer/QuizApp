@@ -262,3 +262,29 @@ li {
 .quiz-start-arrow {
     height: 24px;
 }
+
+@media(max-width: 768px) {
+    .bg-navbar {
+        border-radius: 0 0 0 0;
+    }
+
+    .container {
+        max-width: unset !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .quiz-card {
+        width: 100%;
+    }
+
+    .list-group {
+        flex-direction: row !important;
+    }
+
+    .navbar-logo {
+        height: 40px !important;
+        top: unset;
+        right: 8px;
+    }
+}
