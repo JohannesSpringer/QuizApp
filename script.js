@@ -394,6 +394,7 @@ function chooseQuiz(quizId) {
     document.getElementById('next-question').disabled = true;
     resetAnswerButtons();
     resetSelectedAnswers();
+    document.getElementById('progressBar').style.width = `0%`;
     loadQuestions(quizId);
     showQuestion();
 }
