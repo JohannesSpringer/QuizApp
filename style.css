@@ -9,7 +9,7 @@ li {
 
 .container {
     background-color: rgb(254, 250, 239) !important;
-    min-height: 100vh;
+    min-height: calc(100vh - 16px);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -269,6 +269,9 @@ let currentQuestion = 0;
 let AUDIO_SUCCESS = new Audio('audio/success.mp3');
 let AUDIO_FAIL = new Audio('audio/fail.mp3');
 
+//todo: Reset Sound -> Bei jeder Frage soll Sound abgespielt werden
+//todo: Clean coding!!!
+
 function init() {
     loadQuestions('quiz_1');
     showQuestion();
