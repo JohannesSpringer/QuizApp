@@ -7,16 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quiz App</title>
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="fonts.css">
   <script src="script.js"></script>
-  
+
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
 </head>
 
 <body onload="init()">
@@ -28,28 +27,18 @@
     <div class="card quiz-card mb-3">
       <div class="row g-0">
 
-        <!-- Navbar not responsive -->
-        <nav class="col-md-2 bg-navbar flex-column">
+        <nav class="col-md-2 bg-navbar">
           <img src="img/logo.png" class="img-fluid rounded-start navbar-logo">
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item active" id="quiz_1" onclick="chooseQuiz('quiz_1')">HTML</li>
-            <li class="list-group-item" id="quiz_2" onclick="chooseQuiz('quiz_2')">Musik</li>
-            <li class="list-group-item" id="quiz_3" onclick="chooseQuiz('quiz_3')">Geo</li>
-            <li class="list-group-item" id="quiz_4" onclick="chooseQuiz('quiz_4')">Politik</li>
-          </ul>
-        </nav>
-
-        <!-- Navbar responsive -->
-        <nav class="col-md-2 bg-navbar-responsive">
           <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Liste
+            <button type="button" class="btn btn-dropdown dropdown-toggle" data-bs-toggle="dropdown" id="chooseButton">
+              Quiz wählen
             </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">Item 1</a>
-              <a class="dropdown-item" href="#">Item 2</a>
-              <a class="dropdown-item" href="#">Item 3</a>
-            </div>
+            <ul class="list-group list-group-flush dropdown-menu">
+              <li class="list-group-item active" id="quiz_1" onclick="chooseQuiz('quiz_1')">HTML</li>
+              <li class="list-group-item" id="quiz_2" onclick="chooseQuiz('quiz_2')">Musik</li>
+              <li class="list-group-item" id="quiz_3" onclick="chooseQuiz('quiz_3')">Geo</li>
+              <li class="list-group-item" id="quiz_4" onclick="chooseQuiz('quiz_4')">Politik</li>
+            </ul>
           </div>
         </nav>
 
@@ -64,8 +53,7 @@
               <div id="quizScore">5/10</div>
             </div>
             <div class="quiz-complete-buttons">
-              <button type="button" class="btn btn-primary">SHARE</button>
-              <button type="button" class="btn btn-outline-primary" onclick="restartGame()">REPLAY</button>
+              <button type="button" class="btn btn-primary" onclick="restartGame()">REPLAY</button>
             </div>
             <div class="quiz-complete-trophy">
               <img src="img/tropy.png" alt="Trophäe">

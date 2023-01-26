@@ -12,7 +12,7 @@ let questionsQuiz1 = [
         "selected_answer": '',
     },
     {
-        "question": 'Was bedeutet das HTML Tag <a>?',
+        "question": 'Was bedeutet das HTML Tag &lt;a&gt;?',
         "answer_1": 'Text Fett',
         "answer_2": 'Container',
         "answer_3": 'Ein Link',
@@ -309,15 +309,16 @@ function answer(selection) {
         addClassToAnswerButton(idOfRightAnswerCard, true);
         AUDIO_FAIL.play();
     }
+    disableAnswerButtons();
     calculateProgressBar();
     document.getElementById('next-question').disabled = false;
-
 }
 
 function nextQuestion() {
     currentQuestion++;
     document.getElementById('next-question').disabled = true;
     resetAnswerButtons();
+    enableAnswerButtons();
     showQuestion();
 }
 
@@ -334,8 +335,20 @@ function addClassToAnswerButton(id, answer) {
         document.getElementById(id).classList.add('bg-right-answer');
         document.getElementById(id + '_choice').classList.add('right-answer-choice');
     } else {
-        document.getElementById(id).classList.add('bg-wrong-answer');
+        document.getElementById(id).classList.add('bg-wrong-answer', 'disable');
         document.getElementById(id + '_choice').classList.add('wrong-answer-choice');
+    }
+}
+
+function disableAnswerButtons() {
+    for (let index = 1; index <= 4; index++) {
+        document.getElementById('answer_' + `${index}` + '_card').classList.add('disable');
+    }
+}
+
+function enableAnswerButtons() {
+    for (let index = 1; index <= 4; index++) {
+        document.getElementById('answer_' + `${index}` + '_card').classList.remove('disable');
     }
 }
 
@@ -390,10 +403,12 @@ function chooseQuiz(quizId) {
     document.getElementById('questionBody').style = 'display: none;';
     document.getElementById('startScreen').style = '';
     document.getElementById('endScreen').style = 'display: none;';
+    document.getElementById('chooseButton').innerHTML = document.getElementById(quizId).innerHTML
     currentQuestion = 0;
     document.getElementById('next-question').disabled = true;
     resetAnswerButtons();
     resetSelectedAnswers();
+    enableAnswerButtons();
     document.getElementById('progressBar').style.width = `0%`;
     loadQuestions(quizId);
     showQuestion();

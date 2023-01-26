@@ -71,6 +71,7 @@ li {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     padding-right: 0.5rem !important;
+    padding-left: 4rem !important;
     align-items: center;
     min-height: 56px;
 }
@@ -193,13 +194,6 @@ li {
     width: 10rem;
 }
 
-.btn-outline-primary {
-    border: unset !important;
-    color: #183CE8 !important;
-    width: 10rem;
-    background-color: transparent !important;
-}
-
 .quiz-complete-buttons {
     display: flex;
     flex-direction: column;
@@ -215,6 +209,7 @@ li {
 
 .quiz-complete-trophy img {
     height: 12rem;
+    max-height: 30vw;
 }
 
 #startScreen {
@@ -248,6 +243,10 @@ li {
     right: 32px;
 }
 
+.disable {
+    pointer-events: none;
+}
+
 .btn-bd-primary {
     --bs-btn-color: var(--bs-white) !important;
     --bs-btn-bg: #FF4D10 !important;
@@ -263,14 +262,50 @@ li {
     height: 24px;
 }
 
-.bg-navbar-responsive {
+.btn-dropdown {
+    color: white;
+    border: none;
     display: none;
+}
+
+.btn-dropdown:hover,
+.btn-dropdown:active,
+.btn-dropdown:focus,
+.btn-dropdown:focus-visible,
+.btn-dropdown:target,
+.btn-dropdown:visited,
+.btn-dropdown:focus-within {
+    color: white !important;
+}
+
+.dropdown-menu {
+    background-color: #27355C;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: unset;
+    border-bottom-right-radius: unset;
+}
+
+.list-group-item:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white !important;
+}
+
+.dropdown {
+    min-height: inherit;
+    display: flex;
 }
 
 @media(max-width: 768px) {
     .bg-navbar {
         border-radius: 0 0 0 0;
-        display: none;
+        min-height: 48px;
     }
 
     .container {
@@ -287,17 +322,40 @@ li {
         width: 100%;
     }
 
-    .list-group {
-        flex-direction: row !important;
-    }
-
     .navbar-logo {
-        height: 40px !important;
+        height: 48px !important;
         top: unset;
         right: 8px;
     }
 
-    .bg-navbar-responsive {
+    .btn-dropdown {
         display: unset;
+    }
+
+    .list-group {
+        display: none;
+        width: 3rem;
+    }
+
+    .dropdown {
+        width: inherit;
+    }
+
+    .card-body {
+        padding: 4px 2rem 4px 2rem;
+    }
+}
+
+@media(max-width: 450px) {
+    .card-body {
+        padding: 4px 12px 4px 12px;
+    }
+}
+
+@media(min-width: 768px) {
+    .dropdown-menu {
+        position: unset;
+        min-width: unset;
+        border: unset;
     }
 }
