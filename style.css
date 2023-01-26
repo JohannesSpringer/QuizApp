@@ -19,7 +19,7 @@ li {
 .card {
     border: unset !important;
     border-radius: unset !important;
-    --bs-card-spacer-x: 5rem !important; 
+    --bs-card-spacer-x: 5rem !important;
     --bs-card-title-spacer-y: 1.5rem !important;
 }
 
@@ -167,7 +167,7 @@ li {
 }
 
 .quiz-complete-head img {
-    width: 86px;  
+    width: 86px;
 }
 
 .height-card-min {
@@ -263,6 +263,10 @@ li {
     height: 24px;
 }
 
+.bg-navbar-responsive {
+    display: none;
+}
+
 @media(max-width: 768px) {
     .bg-navbar {
         border-radius: 0 0 0 0;
@@ -291,5 +295,9 @@ li {
         height: 40px !important;
         top: unset;
         right: 8px;
+    }
+
+    .bg-navbar-responsive {
+        display: unset;
     }
 }
