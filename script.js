@@ -1,5 +1,3 @@
-import { createPopper } from '@popperjs/core';
-
 let questions = [];
 
 // questions HTML
