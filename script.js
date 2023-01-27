@@ -150,6 +150,7 @@ function calculateScore() {
 function calculateProgressBar() {
     let percent = Math.round((currentQuestion + 1) / questions.length * 100);
     document.getElementById('progressBar').style.width = `${percent}%`;
+    document.getElementById('progressBar').innerHTML = `${percent}%`;
 }
 
 function restartGame() {
@@ -158,6 +159,7 @@ function restartGame() {
     enablePreviousQuestionButton();
     resetCurrentQuestion();
     resetSelectedAnswers();
+    resetProgressBar();
     showQuestion();
 }
 
