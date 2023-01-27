@@ -261,5 +261,3 @@ let questionsQuiz4 = [
         "selected_answer": '',
     },
 ];
-
-export let test = {questionsQuiz1, questionsQuiz2, questionsQuiz3, questionsQuiz4};
