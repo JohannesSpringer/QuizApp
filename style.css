@@ -34,8 +34,7 @@ li {
 }
 
 .left-right-arrows {
-    display: flex;
-    justify-content: space-between;
+    position: relative;
 }
 
 .left-right-arrows img {
@@ -158,6 +157,15 @@ li {
 .btn-next {
     border: unset;
     background-color: unset;
+    position: absolute;
+    right: 8px;
+}
+
+.btn-previous {
+    border: unset;
+    background-color: unset;
+    position: absolute;
+    left: 8px;
 }
 
 .quiz-complete-head {
@@ -300,6 +308,10 @@ li {
 .dropdown {
     min-height: inherit;
     display: flex;
+}
+
+.display-none {
+    display: none;
 }
 
 @media(max-width: 768px) {

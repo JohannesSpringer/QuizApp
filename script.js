@@ -6,7 +6,6 @@ let AUDIO_FAIL = new Audio('audio/fail.mp3');
 
 function init() {
     loadQuestions('quiz_1');
-    showQuestion();
 }
 
 function showQuestion() {
@@ -81,7 +80,7 @@ function answerIsRight(selectedQuestionNumber, question) {
 
 function nextQuestion() {
     currentQuestion++;
-    document.getElementById('next-question').disabled = true;
+    disableNextQuestionButton();
     resetAnswerButtons();
     resetAudio();
     enablePreviousQuestionButton();
@@ -215,26 +214,31 @@ function loadQuestions(quizId) {
 }
 
 function startQuiz() {
+    showQuestion();
     document.getElementById('questionBody').style = '';
     document.getElementById('startScreen').style = 'display: none;';
     document.getElementById('endScreen').style = 'display: none;';
-    enablePreviousQuestionButton();
+    //enablePreviousQuestionButton();
 }
 
 function disablePreviousQuestionButton() {
-    document.getElementById('previous-question').disabled = true;
+    //document.getElementById('previous-question').disabled = true;
+    document.getElementById('previous-question').classList.add('display-none');
 }
 
 function enablePreviousQuestionButton() {
-    document.getElementById('previous-question').disabled = false;
+    //document.getElementById('previous-question').disabled = false;
+    document.getElementById('previous-question').classList.remove('display-none');
 }
 
 function disableNextQuestionButton() {
-    document.getElementById('next-question').disabled = true;
+    //document.getElementById('next-question').disabled = true;
+    document.getElementById('next-question').classList.add('display-none');
 }
 
 function enableNextQuestionButton() {
-    document.getElementById('next-question').disabled = false;
+    //document.getElementById('next-question').disabled = false;
+    document.getElementById('next-question').classList.remove('display-none');
 }
 
 function resetCurrentQuestion() {
